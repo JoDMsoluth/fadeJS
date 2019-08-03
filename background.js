@@ -8,7 +8,6 @@ opacity = 1;
 const BG_NUMBER = 10;
 
 function setBg() {
-  console.log("setBG");
   const randomBG = Math.ceil(Math.random()*BG_NUMBER);
   bgImg.src = `img/${randomBG}.jpg`;
 }
