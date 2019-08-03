@@ -13,13 +13,6 @@ function setBg() {
   bgImg.src = `img/${randomBG}.jpg`;
 }
 
-function hide () {
-
-}
-
-function reveal () {
-}
-
 function fadeOut() {
   const outFade = setInterval(function() {
     if(opacity>0.2 && isFade === false){
@@ -58,26 +51,17 @@ function fadeIn() {
 
 function fade() {
   fadeOut();
+  setTimeout(setBg,400);
   setTimeout(fadeIn,400);
 }
 
 function changeBg() {
-  const random = setInterval(function()
-  {
-    setBg();
-    setTimeout(fade,2600);
-  }, 3000);
+  const random = setInterval(fade, 3360);
 }
 
 function callRandomBG() {
   setBg();
-  setTimeout(fade, 2600);
   changeBg();
 }
 
-
-function init() {
-  callRandomBG();
-}
-
-init();
+callRandomBG();
