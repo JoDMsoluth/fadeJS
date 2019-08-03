@@ -18,14 +18,12 @@ function fadeOut() {
     if(opacity>0.2 && isFade === false){
       opacity = opacity-0.1;
       bgImg.style.opacity = opacity;
-      console.log(bgImg.style.opacity);
     }
     else{
       isFade=true;
       opacity=0.1;
       bgImg.style.opacity = opacity;
       clearInterval(outFade);
-      console.log("out clear");
     }
   },40);
 }
@@ -36,15 +34,12 @@ function fadeIn() {
       if(opacity<0.9 && isFade){
         opacity = opacity+0.1;
         bgImg.style.opacity = opacity;
-        console.log(bgImg.style.opacity);
       }
       else {
         isFade=false;
         opacity = 1;
         bgImg.style.opacity = opacity;
         clearInterval(inFade);
-        console.log(bgImg.style.opacity);
-        console.log("in clear");
       }
   }, 40);
 }
